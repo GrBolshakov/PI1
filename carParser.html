@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/js/uikit-icons.min.js"></script>
+</head>
+<body>
+    <div id="contentHolder">
+        
+    </div>
+
+    <script>
+        (() => {
+        let contentHolderElem = document.getElementById("contentHolder");
+        if (contentHolderElem && contentHolderElem.innerHTML !== undefined){
+            var contentHolder = "";
+            contentHolder += '<div class="uk-section uk-section-muted">';
+                contentHolder += '<div class="uk-container">';
+                    contentHolder += '<h3>Section</h3>';
+                    contentHolder += '<div class="uk-grid-match uk-child-width-1-3@m" uk-grid>';
+                        contentHolder += '<div>';
+                            contentHolder += '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>';
+                        contentHolder += '</div>';
+                        contentHolder += '<div>';
+                            contentHolder += '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>';
+                        contentHolder += '</div>';
+                        contentHolder += '<div>';
+                            contentHolder += '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>';
+                        contentHolder += '</div>';
+                    contentHolder += '</div>';
+                contentHolder += '</div>';
+            contentHolder += '</div>';
+            contentHolderElem.innerHTML = contentHolder;
+        }
+    })();
+    </script>
+</body>
+</html>
